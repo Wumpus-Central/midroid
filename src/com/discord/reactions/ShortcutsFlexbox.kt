@@ -55,11 +55,11 @@ public class ShortcutsFlexbox  public constructor(context: Context, attrs: Attri
    private fun getOrCreateReactionView(index: Int): ReactionView {
       if (var1 < this.getChildCount() - 1) {
          val var2: View = this.getChildAt(var1);
-         val var3: ReactionView = var2 as ReactionView;
-         val var4: android.view.ViewGroup.LayoutParams = (var2 as ReactionView).getLayoutParams();
-         var3.setLayoutParams(var4 as FlexboxLayout.LayoutParams);
-         var3.setVisibility(0);
-         return var3;
+         val var4: ReactionView = var2 as ReactionView;
+         val var3: android.view.ViewGroup.LayoutParams = (var2 as ReactionView).getLayoutParams();
+         var4.setLayoutParams(var3 as FlexboxLayout.LayoutParams);
+         var4.setVisibility(0);
+         return var4;
       } else {
          return this.createAndAddReactionView(this.getChildCount() - 1);
       }
@@ -119,16 +119,16 @@ public class ShortcutsFlexbox  public constructor(context: Context, attrs: Attri
       val var18: java.util.Iterator = var1.iterator();
 
       for (int var10 = 0; var18.hasNext(); var10++) {
-         var var21: Any = var18.next();
+         var var21: ReactionView = (ReactionView)var18.next();
          if (var10 < 0) {
             CollectionsKt.v();
          }
 
-         var21 = var21 as ReactionView.Reaction;
-         val var14: ReactionView = this.getOrCreateReactionView(var10);
-         var14.setReaction((ReactionView.Reaction)var21, var5);
-         NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var14, false, new com.discord.reactions.f(var7, (ReactionView.Reaction)var21), 1, null);
-         NestedScrollOnTouchUtilsKt.setOnLongClickListenerNested$default(var14, false, new com.discord.reactions.g(var8, (ReactionView.Reaction)var21), 1, null);
+         val var14: ReactionView.Reaction = var21 as ReactionView.Reaction;
+         var21 = this.getOrCreateReactionView(var10);
+         var21.setReaction(var14, var5);
+         NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var21, false, new com.discord.reactions.f(var7, var14), 1, null);
+         NestedScrollOnTouchUtilsKt.setOnLongClickListenerNested$default(var21, false, new com.discord.reactions.g(var8, var14), 1, null);
       }
 
       this.hideRemainingReactionsInRow(var1.size());

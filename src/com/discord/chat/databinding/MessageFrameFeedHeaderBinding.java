@@ -49,15 +49,15 @@ public final class MessageFrameFeedHeaderBinding implements ViewBinding {
          TextView var4 = (TextView)k5.a.a(var0, var1);
          if (var4 != null) {
             var1 = R.id.feed_reply_count;
-            TextView var3 = (TextView)k5.a.a(var0, var1);
-            if (var3 != null) {
+            TextView var2 = (TextView)k5.a.a(var0, var1);
+            if (var2 != null) {
                var1 = R.id.feed_reply_icon;
-               SimpleDraweeView var2 = (SimpleDraweeView)k5.a.a(var0, var1);
-               if (var2 != null) {
+               SimpleDraweeView var3 = (SimpleDraweeView)k5.a.a(var0, var1);
+               if (var3 != null) {
                   var1 = R.id.feed_reply_participants;
                   OverlappingCirclesView var5 = (OverlappingCirclesView)k5.a.a(var0, var1);
                   if (var5 != null) {
-                     return new MessageFrameFeedHeaderBinding(var0, var6, var4, var3, var2, var5);
+                     return new MessageFrameFeedHeaderBinding(var0, var6, var4, var2, var3, var5);
                   }
                }
             }

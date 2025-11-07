@@ -26,12 +26,12 @@ public final class MediaVisualPlaceholderViewBinding implements ViewBinding {
    @NonNull
    public static MediaVisualPlaceholderViewBinding bind(@NonNull View var0) {
       int var1 = R.id.container;
-      ConstraintLayout var2 = (ConstraintLayout)k5.a.a(var0, var1);
-      if (var2 != null) {
+      ConstraintLayout var3 = (ConstraintLayout)k5.a.a(var0, var1);
+      if (var3 != null) {
          var1 = R.id.image_invalid;
-         SimpleDraweeView var3 = (SimpleDraweeView)k5.a.a(var0, var1);
-         if (var3 != null) {
-            return new MediaVisualPlaceholderViewBinding(var0, var2, var3);
+         SimpleDraweeView var2 = (SimpleDraweeView)k5.a.a(var0, var1);
+         if (var2 != null) {
+            return new MediaVisualPlaceholderViewBinding(var0, var3, var2);
          }
       }
 

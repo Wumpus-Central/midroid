@@ -75,9 +75,9 @@ public abstract class ReactActivity : com.facebook.react.ReactActivity {
 
       BundleUpdater.Companion.checkForOta();
       ImmersiveMode.INSTANCE.enableImmersiveMode(this);
-      val var2: JankStatsAggregator = JankStatsAggregator.INSTANCE;
-      val var4: Window = this.getWindow();
-      var2.initialize(var4);
+      val var4: JankStatsAggregator = JankStatsAggregator.INSTANCE;
+      val var2: Window = this.getWindow();
+      var4.initialize(var2);
       JSWatchdogManager.INSTANCE.initialize(this);
       val var5: ThemeManager = ThemeManager.INSTANCE;
       ThemeManager.INSTANCE.updateSystemUi(this);

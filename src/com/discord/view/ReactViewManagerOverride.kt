@@ -28,8 +28,8 @@ public class ReactViewManagerOverride : ReactViewManager {
             var11 = false;
          }
 
-         val var6: Boolean = var2.getParent() == var1;
-         val var7: Boolean = var1.getRemoveClippedSubviews();
+         val var7: Boolean = var2.getParent() == var1;
+         val var6: Boolean = var1.getRemoveClippedSubviews();
          val var10: Any = var2.getTag(R.id.view_clipped);
          var8 = null;
          if (var10 is java.lang.Boolean) {
@@ -40,15 +40,15 @@ public class ReactViewManagerOverride : ReactViewManager {
             var5 = var8;
          }
 
-         val var15: java.lang.String = var2.getClass().getName();
-         val var14: io.sentry.e = io.sentry.e.n("ReactViewManagerOverride: Child view already has a parent!");
-         var14.o("react.viewmanager");
-         var14.p("isTransitioning", var11);
-         var14.p("wantsToAddToSameParent", var6);
-         var14.p("isParentClipping", var7);
-         var14.p("isChildClipped", var5);
-         var14.p("childClassType", var15);
-         o3.e(var14);
+         val var14: java.lang.String = var2.getClass().getName();
+         val var15: io.sentry.e = io.sentry.e.n("ReactViewManagerOverride: Child view already has a parent!");
+         var15.o("react.viewmanager");
+         var15.p("isTransitioning", var11);
+         var15.p("wantsToAddToSameParent", var7);
+         var15.p("isParentClipping", var6);
+         var15.p("isChildClipped", var5);
+         var15.p("childClassType", var14);
+         o3.e(var15);
       }
 
       super.addView(var1, var2, var3);

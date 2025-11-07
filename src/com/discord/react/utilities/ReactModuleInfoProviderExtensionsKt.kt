@@ -50,8 +50,8 @@ fun `createReactModuleInfoProvider$lambda$1`(var0: java.util.List, var1: Boolean
    val var2: java.lang.Iterable = var0;
    val var4: LinkedHashMap = new LinkedHashMap(kotlin.ranges.e.e(s0.e(CollectionsKt.w(var0, 10)), 16));
 
-   for (var2 : var2) {
-      var4.put(var2, createReactModuleInfo(var2 as java.lang.String, var1));
+   for (Object var3 : var2) {
+      var4.put(var3, createReactModuleInfo(var3 as java.lang.String, var1));
    }
 
    return var4;

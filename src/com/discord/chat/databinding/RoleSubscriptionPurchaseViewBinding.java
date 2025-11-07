@@ -53,24 +53,24 @@ public final class RoleSubscriptionPurchaseViewBinding implements ViewBinding {
       View var2 = k5.a.a(var0, var1);
       if (var2 != null) {
          var1 = R.id.role_subscription_purchase_badge;
-         SimpleDraweeView var7 = (SimpleDraweeView)k5.a.a(var0, var1);
-         if (var7 != null) {
+         SimpleDraweeView var8 = (SimpleDraweeView)k5.a.a(var0, var1);
+         if (var8 != null) {
             var1 = R.id.role_subscription_purchase_card_bg;
-            SimpleDraweeView var6 = (SimpleDraweeView)k5.a.a(var0, var1);
-            if (var6 != null) {
+            SimpleDraweeView var5 = (SimpleDraweeView)k5.a.a(var0, var1);
+            if (var5 != null) {
                var1 = R.id.role_subscription_purchase_lanyard;
-               SimpleDraweeView var8 = (SimpleDraweeView)k5.a.a(var0, var1);
-               if (var8 != null) {
+               SimpleDraweeView var6 = (SimpleDraweeView)k5.a.a(var0, var1);
+               if (var6 != null) {
                   var1 = R.id.role_subscription_purchaser_avatar;
-                  SimpleDraweeView var3 = (SimpleDraweeView)k5.a.a(var0, var1);
-                  if (var3 != null) {
+                  SimpleDraweeView var4 = (SimpleDraweeView)k5.a.a(var0, var1);
+                  if (var4 != null) {
                      var1 = R.id.role_subscription_purchaser_username;
-                     TextView var5 = (TextView)k5.a.a(var0, var1);
-                     if (var5 != null) {
+                     TextView var7 = (TextView)k5.a.a(var0, var1);
+                     if (var7 != null) {
                         var1 = R.id.role_subscription_welcome;
-                        TextView var4 = (TextView)k5.a.a(var0, var1);
-                        if (var4 != null) {
-                           return new RoleSubscriptionPurchaseViewBinding(var0, var2, var7, var6, var8, var3, var5, var4);
+                        TextView var3 = (TextView)k5.a.a(var0, var1);
+                        if (var3 != null) {
+                           return new RoleSubscriptionPurchaseViewBinding(var0, var2, var8, var5, var6, var4, var7, var3);
                         }
                      }
                   }

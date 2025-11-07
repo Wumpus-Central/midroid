@@ -88,24 +88,24 @@ public data class RoleIcon(source: String? = null, unicodeEmoji: String? = null,
    }
 
    public override fun toString(): String {
-      val var5: java.lang.String = this.source;
-      val var6: java.lang.String = this.unicodeEmoji;
-      val var2: java.lang.String = this.name;
+      val var4: java.lang.String = this.source;
+      val var5: java.lang.String = this.unicodeEmoji;
+      val var3: java.lang.String = this.name;
       val var1: Int = this.size;
-      val var4: java.lang.String = this.alt;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("RoleIcon(source=");
-      var3.append(var5);
-      var3.append(", unicodeEmoji=");
-      var3.append(var6);
-      var3.append(", name=");
-      var3.append(var2);
-      var3.append(", size=");
-      var3.append(var1);
-      var3.append(", alt=");
-      var3.append(var4);
-      var3.append(")");
-      return var3.toString();
+      val var2: java.lang.String = this.alt;
+      val var6: StringBuilder = new StringBuilder();
+      var6.append("RoleIcon(source=");
+      var6.append(var4);
+      var6.append(", unicodeEmoji=");
+      var6.append(var5);
+      var6.append(", name=");
+      var6.append(var3);
+      var6.append(", size=");
+      var6.append(var1);
+      var6.append(", alt=");
+      var6.append(var2);
+      var6.append(")");
+      return var6.toString();
    }
 
    public companion object {

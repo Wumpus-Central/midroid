@@ -50,7 +50,7 @@ internal class DeviceResourceUsageManager(context: Context) {
       try {
          var14 = Result.b(Os.sysconf(OsConstants._SC_PAGE_SIZE));
       } catch (var3: java.lang.Throwable) {
-         var1 = Result.e;
+         var14 = Result.e;
          var14 = Result.b(kotlin.c.a(var3));
          break label36;
       }
@@ -239,10 +239,10 @@ internal class DeviceResourceUsageManager(context: Context) {
       // 06: monitorenter
       // 07: aload 0
       // 08: getfield com/discord/resource_usage/DeviceResourceUsageManager.thread Ljava/lang/Thread;
-      // 0b: astore 2
+      // 0b: astore 3
       // 0c: new e9/a
-      // 0f: astore 3
-      // 10: aload 3
+      // 0f: astore 2
+      // 10: aload 2
       // 11: aload 0
       // 12: invokespecial e9/a.<init> (Lcom/discord/resource_usage/DeviceResourceUsageManager;)V
       // 15: aload 0
@@ -251,16 +251,16 @@ internal class DeviceResourceUsageManager(context: Context) {
       // 18: aconst_null
       // 19: ldc_w "DeviceResourceUsageMonitor"
       // 1c: bipush 2
-      // 1d: aload 3
+      // 1d: aload 2
       // 1e: bipush 4
       // 1f: aconst_null
       // 20: invokestatic mt/a.b (ZZLjava/lang/ClassLoader;Ljava/lang/String;ILkotlin/jvm/functions/Function0;ILjava/lang/Object;)Ljava/lang/Thread;
       // 23: putfield com/discord/resource_usage/DeviceResourceUsageManager.thread Ljava/lang/Thread;
       // 26: aload 1
       // 27: monitorexit
-      // 28: aload 2
+      // 28: aload 3
       // 29: ifnull 30
-      // 2c: aload 2
+      // 2c: aload 3
       // 2d: invokevirtual java/lang/Thread.interrupt ()V
       // 30: return
       // 31: astore 2

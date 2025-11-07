@@ -44,13 +44,13 @@ public object AppIconUtil {
    }
 
    public fun getCurrentAppIcon(context: Context): AppIcon {
-      val var3: PackageManager = var1.getPackageManager();
-      val var4: java.util.Iterator = AppIcon.getEntries().iterator();
+      val var4: PackageManager = var1.getPackageManager();
+      val var3: java.util.Iterator = AppIcon.getEntries().iterator();
 
       while (true) {
-         if (var4.hasNext()) {
-            val var2: Any = var4.next();
-            if (var3.getComponentEnabledSetting(new ComponentName(var1, (var2 as AppIcon).getAlias())) != 1) {
+         if (var3.hasNext()) {
+            val var2: Any = var3.next();
+            if (var4.getComponentEnabledSetting(new ComponentName(var1, (var2 as AppIcon).getAlias())) != 1) {
                continue;
             }
 
@@ -68,18 +68,18 @@ public object AppIconUtil {
    public fun setAppIcon(context: Context, id: String) {
       val var4: AppIcon = this.getAppIconFromId(var2);
       if (var4 != null) {
-         val var7: PackageManager = var1.getPackageManager();
+         val var9: PackageManager = var1.getPackageManager();
 
-         for (AppIcon var6 : AppIcon.getEntries()) {
-            val var9: ComponentName = new ComponentName(var1, var6.getAlias());
+         for (AppIcon var7 : AppIcon.getEntries()) {
+            val var5: ComponentName = new ComponentName(var1, var7.getAlias());
             val var3: Boolean;
-            if (var6 === var4) {
+            if (var7 === var4) {
                var3 = true;
             } else {
                var3 = false;
             }
 
-            this.setComponentState(var7, var9, var3);
+            this.setComponentState(var9, var5, var3);
          }
       } else {
          val var8: StringBuilder = new StringBuilder();

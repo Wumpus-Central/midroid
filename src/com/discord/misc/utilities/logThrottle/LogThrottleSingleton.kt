@@ -21,7 +21,7 @@ public object LogThrottleSingleton {
    }
 
    public fun shouldThrottle(messageKey: String, rateLimitMs: Long): Boolean {
-      val var4: Long = System.currentTimeMillis();
+      val var6: Long = System.currentTimeMillis();
       val var10: ConcurrentHashMap = messageTimestamps;
       val var9: Any = messageTimestamps.get(var1);
       var var8: Any = var9;
@@ -33,7 +33,7 @@ public object LogThrottleSingleton {
          }
       }
 
-      val var6: Long = (var8 as AtomicLong).get();
-      return var2 + var6 > var4 || (var8 as AtomicLong).compareAndSet(var6, var4) xor true;
+      val var4: Long = (var8 as AtomicLong).get();
+      return var2 + var4 > var6 || (var8 as AtomicLong).compareAndSet(var4, var6) xor true;
    }
 }

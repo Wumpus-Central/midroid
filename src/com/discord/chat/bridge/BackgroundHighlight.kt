@@ -61,15 +61,15 @@ public data class BackgroundHighlight(backgroundColor: Int? = null, gutterColor:
    }
 
    public override fun toString(): String {
-      val var1: Int = this.backgroundColor;
+      val var2: Int = this.backgroundColor;
       val var3: Int = this.gutterColor;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("BackgroundHighlight(backgroundColor=");
-      var2.append(var1);
-      var2.append(", gutterColor=");
-      var2.append(var3);
-      var2.append(")");
-      return var2.toString();
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("BackgroundHighlight(backgroundColor=");
+      var1.append(var2);
+      var1.append(", gutterColor=");
+      var1.append(var3);
+      var1.append(")");
+      return var1.toString();
    }
 
    public companion object {

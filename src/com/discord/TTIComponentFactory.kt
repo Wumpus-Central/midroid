@@ -34,26 +34,26 @@ public class TTIComponentFactory : AppComponentFactory {
    }
 
    public open fun instantiateReceiver(cl: ClassLoader, className: String, intent: Intent?): BroadcastReceiver {
-      val var5: Log = Log.INSTANCE;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("Receiver: ");
-      var4.append(var2);
-      var4.append(", intent=");
-      var4.append(var3);
-      Log.i$default(var5, "TTIFactory", var4.toString(), null, 4, null);
+      val var4: Log = Log.INSTANCE;
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("Receiver: ");
+      var5.append(var2);
+      var5.append(", intent=");
+      var5.append(var3);
+      Log.i$default(var4, "TTIFactory", var5.toString(), null, 4, null);
       TTIModule.Companion.markBroadcastReceiverInstantiation();
       val var6: BroadcastReceiver = super.instantiateReceiver(var1, var2, var3);
       return var6;
    }
 
    public open fun instantiateService(cl: ClassLoader, className: String, intent: Intent?): Service {
-      val var4: Log = Log.INSTANCE;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("Service: ");
-      var5.append(var2);
-      var5.append(", intent=");
-      var5.append(var3);
-      Log.i$default(var4, "TTIFactory", var5.toString(), null, 4, null);
+      val var5: Log = Log.INSTANCE;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("Service: ");
+      var4.append(var2);
+      var4.append(", intent=");
+      var4.append(var3);
+      Log.i$default(var5, "TTIFactory", var4.toString(), null, 4, null);
       TTIModule.Companion.markServiceInstantiation();
       val var6: Service = super.instantiateService(var1, var2, var3);
       return var6;

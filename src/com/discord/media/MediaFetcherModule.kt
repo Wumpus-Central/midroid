@@ -52,13 +52,13 @@ public class MediaFetcherModule(reactContext: ReactApplicationContext) : ReactCo
          var5 = null;
       }
 
-      val var7: ContentResolverMedia.QueryType = this.getQueryType(var1.getString("assetType"));
+      val var6: ContentResolverMedia.QueryType = this.getQueryType(var1.getString("assetType"));
 
       var var4: Int;
       try {
-         val var6: ContentResolverMedia.Companion = ContentResolverMedia.Companion;
+         val var7: ContentResolverMedia.Companion = ContentResolverMedia.Companion;
          val var12: ReactApplicationContext = this.getReactApplicationContext();
-         var16 = CollectionsKt.a1(CollectionsKt.W0(var6.getMedia(var12, var7, var3, var5), new Comparator() {
+         var16 = CollectionsKt.a1(CollectionsKt.W0(var7.getMedia(var12, var6, var3, var5), new Comparator() {
             @Override
             public final int compare(T var1, T var2) {
                return lt.a.d((var2 as ContentResolverMedia).getDateAdded(), (var1 as ContentResolverMedia).getDateAdded());

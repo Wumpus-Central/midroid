@@ -16,11 +16,11 @@ internal class BlurViewManager : InitialPropsViewGroupManager<ViewGroup>, DCDVis
    private final val delegate: DCDVisualEffectViewManagerDelegate<ViewGroup, BlurViewManager> = new DCDVisualEffectViewManagerDelegate(this)
 
    public open fun createViewInstance(reactContext: ThemedReactContext, initialProps: ReactStylesDiffMap): ViewGroup {
-      val var5: java.lang.String = var2.getString("blurTargetViewNativeId");
-      val var6: java.lang.String = var2.getString("blurTintRgba");
+      val var6: java.lang.String = var2.getString("blurTargetViewNativeId");
+      val var5: java.lang.String = var2.getString("blurTintRgba");
       val var3: Float = var2.getFloat("blurAmount", -1.0F);
       val var7: java.lang.String = var2.getString("blurTintIOSParityCompensationRgba");
-      if (var5 != null) {
+      if (var6 != null) {
          val var4: Boolean;
          if (var3 == -1.0F) {
             var4 = true;
@@ -30,9 +30,9 @@ internal class BlurViewManager : InitialPropsViewGroupManager<ViewGroup>, DCDVis
 
          if (!var4) {
             return (ViewGroup)(if (Companion.isHardwareBlurEnabled$blur_release())
-               new BlurViewHardwareAccelerated(var1, var5, ColorUtilsKt.rgbaToArgb(var6), ColorUtilsKt.rgbaToArgb(var7), var3)
+               new BlurViewHardwareAccelerated(var1, var6, ColorUtilsKt.rgbaToArgb(var5), ColorUtilsKt.rgbaToArgb(var7), var3)
                else
-               new BlurView(var1, var5, ColorUtilsKt.rgbaToArgb(var6), ColorUtilsKt.rgbaToArgb(var7), var3));
+               new BlurView(var1, var6, ColorUtilsKt.rgbaToArgb(var5), ColorUtilsKt.rgbaToArgb(var7), var3));
          } else {
             throw new IllegalArgumentException("Failed requirement.");
          }

@@ -18,6 +18,7 @@ import gu.m0
 import ht.v
 import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function2
+import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.serialization.KSerializer
 import xu.m
@@ -145,8 +146,8 @@ internal class PortalFromNativeModule(reactContext: ReactApplicationContext) : N
                      kotlin.c.b(var1);
                   } else {
                      kotlin.c.b(var1);
-                     var1 = m0.a();
-                     val var6: Function2 = new Function2<CoroutineScope, Continuation<? super Unit>, Object>(null) {
+                     val var6: CoroutineDispatcher = m0.a();
+                     var1 = new Function2<CoroutineScope, Continuation<? super Unit>, Object>(null) {
                         int label;
 
                         {
@@ -181,7 +182,7 @@ internal class PortalFromNativeModule(reactContext: ReactApplicationContext) : N
                         }
                      };
                      this.label = 1;
-                     if (gu.g.g(var1, var6, this) === var5) {
+                     if (gu.g.g(var6, var1, this) === var5) {
                         return var5;
                      }
                   }

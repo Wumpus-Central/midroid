@@ -36,10 +36,10 @@ public object ThemeManager {
                      var10 = null;
                   }
 
+                  var3 = resourceTheme;
                   if (resourceTheme == null) {
                      Intrinsics.throwUninitializedPropertyAccessException("resourceTheme");
-                  } else {
-                     var3 = resourceTheme;
+                     var3 = null;
                   }
 
                   return new MidnightTheme(var10, var3);
@@ -53,10 +53,10 @@ public object ThemeManager {
                   var9 = null;
                }
 
-               var3 = resourceTheme;
                if (resourceTheme == null) {
                   Intrinsics.throwUninitializedPropertyAccessException("resourceTheme");
-                  var3 = null;
+               } else {
+                  var3 = resourceTheme;
                }
 
                return new DarkerTheme(var9, var3);

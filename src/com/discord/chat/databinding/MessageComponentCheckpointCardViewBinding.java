@@ -114,95 +114,95 @@ public final class MessageComponentCheckpointCardViewBinding implements ViewBind
    @NonNull
    public static MessageComponentCheckpointCardViewBinding bind(@NonNull View var0) {
       int var1 = R.id.application_image;
-      SimpleDraweeView var8 = (SimpleDraweeView)k5.a.a(var0, var1);
-      if (var8 != null) {
+      SimpleDraweeView var19 = (SimpleDraweeView)k5.a.a(var0, var1);
+      if (var19 != null) {
          var1 = R.id.application_name;
-         TextView var14 = (TextView)k5.a.a(var0, var1);
-         if (var14 != null) {
+         TextView var12 = (TextView)k5.a.a(var0, var1);
+         if (var12 != null) {
             var1 = R.id.checkpoint;
             LinearLayout var20 = (LinearLayout)k5.a.a(var0, var1);
             if (var20 != null) {
                var1 = R.id.cta;
-               TextView var17 = (TextView)k5.a.a(var0, var1);
-               if (var17 != null) {
+               TextView var10 = (TextView)k5.a.a(var0, var1);
+               if (var10 != null) {
                   var1 = R.id.emoji_count;
-                  TextView var16 = (TextView)k5.a.a(var0, var1);
-                  if (var16 != null) {
+                  TextView var17 = (TextView)k5.a.a(var0, var1);
+                  if (var17 != null) {
                      var1 = R.id.emoji_image;
-                     SimpleDraweeView var7 = (SimpleDraweeView)k5.a.a(var0, var1);
-                     if (var7 != null) {
+                     SimpleDraweeView var21 = (SimpleDraweeView)k5.a.a(var0, var1);
+                     if (var21 != null) {
                         var1 = R.id.emoji_name;
-                        TextView var3 = (TextView)k5.a.a(var0, var1);
-                        if (var3 != null) {
+                        TextView var11 = (TextView)k5.a.a(var0, var1);
+                        if (var11 != null) {
                            var1 = R.id.footer;
-                           ConstraintLayout var13 = (ConstraintLayout)k5.a.a(var0, var1);
-                           if (var13 != null) {
+                           ConstraintLayout var14 = (ConstraintLayout)k5.a.a(var0, var1);
+                           if (var14 != null) {
                               var1 = R.id.guild_image;
-                              SimpleDraweeView var4 = (SimpleDraweeView)k5.a.a(var0, var1);
-                              if (var4 != null) {
+                              SimpleDraweeView var22 = (SimpleDraweeView)k5.a.a(var0, var1);
+                              if (var22 != null) {
                                  var1 = R.id.guild_name;
-                                 TextView var21 = (TextView)k5.a.a(var0, var1);
-                                 if (var21 != null) {
+                                 TextView var2 = (TextView)k5.a.a(var0, var1);
+                                 if (var2 != null) {
                                     var1 = R.id.image;
-                                    LinearLayout var12 = (LinearLayout)k5.a.a(var0, var1);
-                                    if (var12 != null) {
+                                    LinearLayout var9 = (LinearLayout)k5.a.a(var0, var1);
+                                    if (var9 != null) {
                                        var1 = R.id.image_resource;
-                                       SimpleDraweeView var6 = (SimpleDraweeView)k5.a.a(var0, var1);
-                                       if (var6 != null) {
+                                       SimpleDraweeView var13 = (SimpleDraweeView)k5.a.a(var0, var1);
+                                       if (var13 != null) {
                                           var1 = R.id.logo;
-                                          ImageView var2 = (ImageView)k5.a.a(var0, var1);
-                                          if (var2 != null) {
+                                          ImageView var6 = (ImageView)k5.a.a(var0, var1);
+                                          if (var6 != null) {
                                              var1 = R.id.message_count;
-                                             TextView var10 = (TextView)k5.a.a(var0, var1);
-                                             if (var10 != null) {
+                                             TextView var3 = (TextView)k5.a.a(var0, var1);
+                                             if (var3 != null) {
                                                 var1 = R.id.power_bar;
-                                                LinearLayout var11 = (LinearLayout)k5.a.a(var0, var1);
-                                                if (var11 != null) {
+                                                LinearLayout var15 = (LinearLayout)k5.a.a(var0, var1);
+                                                if (var15 != null) {
                                                    var1 = R.id.power_container;
-                                                   LinearLayout var18 = (LinearLayout)k5.a.a(var0, var1);
-                                                   if (var18 != null) {
+                                                   LinearLayout var4 = (LinearLayout)k5.a.a(var0, var1);
+                                                   if (var4 != null) {
                                                       var1 = R.id.power_level_lvl;
-                                                      TextView var9 = (TextView)k5.a.a(var0, var1);
-                                                      if (var9 != null) {
+                                                      TextView var18 = (TextView)k5.a.a(var0, var1);
+                                                      if (var18 != null) {
                                                          var1 = R.id.power_level_number;
-                                                         TextView var23 = (TextView)k5.a.a(var0, var1);
-                                                         if (var23 != null) {
+                                                         TextView var16 = (TextView)k5.a.a(var0, var1);
+                                                         if (var16 != null) {
                                                             var1 = R.id.stats;
-                                                            LinearLayout var19 = (LinearLayout)k5.a.a(var0, var1);
-                                                            if (var19 != null) {
+                                                            LinearLayout var5 = (LinearLayout)k5.a.a(var0, var1);
+                                                            if (var5 != null) {
                                                                var1 = R.id.title;
-                                                               TextView var5 = (TextView)k5.a.a(var0, var1);
-                                                               if (var5 != null) {
+                                                               TextView var8 = (TextView)k5.a.a(var0, var1);
+                                                               if (var8 != null) {
                                                                   var1 = R.id.unicode_emoji_image;
-                                                                  TextView var15 = (TextView)k5.a.a(var0, var1);
-                                                                  if (var15 != null) {
+                                                                  TextView var7 = (TextView)k5.a.a(var0, var1);
+                                                                  if (var7 != null) {
                                                                      var1 = R.id.voice_minutes;
-                                                                     TextView var22 = (TextView)k5.a.a(var0, var1);
-                                                                     if (var22 != null) {
+                                                                     TextView var23 = (TextView)k5.a.a(var0, var1);
+                                                                     if (var23 != null) {
                                                                         return new MessageComponentCheckpointCardViewBinding(
                                                                            (CheckpointCardComponentView)var0,
-                                                                           var8,
-                                                                           var14,
-                                                                           var20,
-                                                                           var17,
-                                                                           var16,
-                                                                           var7,
-                                                                           var3,
-                                                                           var13,
-                                                                           var4,
-                                                                           var21,
-                                                                           var12,
-                                                                           var6,
-                                                                           var2,
-                                                                           var10,
-                                                                           var11,
-                                                                           var18,
-                                                                           var9,
-                                                                           var23,
                                                                            var19,
-                                                                           var5,
+                                                                           var12,
+                                                                           var20,
+                                                                           var10,
+                                                                           var17,
+                                                                           var21,
+                                                                           var11,
+                                                                           var14,
+                                                                           var22,
+                                                                           var2,
+                                                                           var9,
+                                                                           var13,
+                                                                           var6,
+                                                                           var3,
                                                                            var15,
-                                                                           var22
+                                                                           var4,
+                                                                           var18,
+                                                                           var16,
+                                                                           var5,
+                                                                           var8,
+                                                                           var7,
+                                                                           var23
                                                                         );
                                                                      }
                                                                   }

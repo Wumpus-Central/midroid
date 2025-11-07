@@ -124,16 +124,16 @@ internal object CustomFontFamilyOverride {
          val var5: Byte = 0;
 
          while (var5 < var8) {
-            var var12: java.lang.String = var28[var5];
-            val var13: StringBuilder = new StringBuilder();
-            var13.append("fonts/");
-            var13.append(var9);
-            var13.append(var12);
-            var12 = var13.toString();
+            val var13: java.lang.String = var28[var5];
+            val var12: StringBuilder = new StringBuilder();
+            var12.append("fonts/");
+            var12.append(var9);
+            var12.append(var13);
+            val var31: java.lang.String = var12.toString();
 
             try {
                com.discord.react_fork_overrides.forks.e.a();
-               val var32: Font = a.a(var3, var12).build();
+               val var32: Font = a.a(var3, var31).build();
                com.discord.react_fork_overrides.forks.f.a();
                val var33: FontFamily = b.a(var32).build();
                var11.add(var33);

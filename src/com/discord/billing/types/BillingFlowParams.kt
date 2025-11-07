@@ -33,11 +33,11 @@ internal object BillingFlowParams {
       var1 = "";
 
       for (int var2 = 0; var2 < var3; var2++) {
-         val var6: java.lang.String = java.lang.String.format("%02x", Arrays.copyOf(new Object[]{var9[var2]}, 1));
-         val var5: StringBuilder = new StringBuilder();
-         var5.append(var1);
-         var5.append(var6);
-         var1 = var5.toString();
+         val var5: java.lang.String = java.lang.String.format("%02x", Arrays.copyOf(new Object[]{var9[var2]}, 1));
+         val var6: StringBuilder = new StringBuilder();
+         var6.append(var1);
+         var6.append(var5);
+         var1 = var6.toString();
       }
 
       return var1;
@@ -101,11 +101,11 @@ internal object BillingFlowParams {
    }
 
    private fun getReplacementMode(oldProductDetails: ProductDetails, newProductDetails: ProductDetails): Int {
-      val var5: Long = this.getPriceAmountMicros(var1);
-      val var3: Long = this.getPriceAmountMicros(var2);
+      val var3: Long = this.getPriceAmountMicros(var1);
+      val var5: Long = this.getPriceAmountMicros(var2);
       val var7: java.lang.String = this.getPricingPhase(var1).b();
       val var8: java.lang.String = this.getPricingPhase(var2).b();
-      return if (var3 / this.calculateStandardizedUnits(var7, var8) <= var5) 6 else 2;
+      return if (var5 / this.calculateStandardizedUnits(var7, var8) <= var3) 6 else 2;
    }
 
    public fun create(productDetails: List<ProductDetails>?, productId: String, productIdOld: String?, purchaseToken: String?, userId: String): com.android.billingclient.api.BillingFlowParams? {

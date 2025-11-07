@@ -15035,6 +15035,9 @@
   "328j/I": [
     "Game Friend request failed"
   ],
+  "s+J8Dl": [
+    "Launch Game"
+  ],
   "89VAgW": [
     [
       1,
@@ -15180,9 +15183,6 @@
   ],
   "gNZY/B": [
     "Choose your Reward"
-  ],
-  "vPeaOS": [
-    "Get one with each gift purchase."
   ],
   "cMiNit": [
     "Snag a free decoration with a gift purchase"
@@ -45848,16 +45848,10 @@
       "availableCount",
       {
         "one": [
-          [
-            7
-          ],
-          " option"
+          "option"
         ],
         "other": [
-          [
-            7
-          ],
-          " options"
+          "options"
         ]
       },
       0,

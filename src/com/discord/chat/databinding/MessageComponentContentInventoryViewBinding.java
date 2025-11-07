@@ -51,27 +51,27 @@ public final class MessageComponentContentInventoryViewBinding implements ViewBi
    @NonNull
    public static MessageComponentContentInventoryViewBinding bind(@NonNull View var0) {
       int var1 = R.id.content_inventory_component_avatar_image;
-      SimpleDraweeView var2 = (SimpleDraweeView)k5.a.a(var0, var1);
-      if (var2 != null) {
+      SimpleDraweeView var6 = (SimpleDraweeView)k5.a.a(var0, var1);
+      if (var6 != null) {
          var1 = R.id.content_inventory_component_badge_icon;
-         SimpleDraweeView var7 = (SimpleDraweeView)k5.a.a(var0, var1);
-         if (var7 != null) {
+         SimpleDraweeView var3 = (SimpleDraweeView)k5.a.a(var0, var1);
+         if (var3 != null) {
             var1 = R.id.content_inventory_component_media_image;
-            SimpleDraweeView var5 = (SimpleDraweeView)k5.a.a(var0, var1);
-            if (var5 != null) {
+            SimpleDraweeView var7 = (SimpleDraweeView)k5.a.a(var0, var1);
+            if (var7 != null) {
                var1 = R.id.content_inventory_component_platform_icon;
-               SimpleDraweeView var4 = (SimpleDraweeView)k5.a.a(var0, var1);
-               if (var4 != null) {
+               SimpleDraweeView var2 = (SimpleDraweeView)k5.a.a(var0, var1);
+               if (var2 != null) {
                   var1 = R.id.content_inventory_component_subtitle;
-                  TextView var6 = (TextView)k5.a.a(var0, var1);
-                  if (var6 != null) {
+                  TextView var5 = (TextView)k5.a.a(var0, var1);
+                  if (var5 != null) {
                      var1 = R.id.content_inventory_component_title;
-                     TextView var3 = (TextView)k5.a.a(var0, var1);
-                     if (var3 != null) {
+                     TextView var4 = (TextView)k5.a.a(var0, var1);
+                     if (var4 != null) {
                         var1 = R.id.content_inventory_component_username;
                         TextView var8 = (TextView)k5.a.a(var0, var1);
                         if (var8 != null) {
-                           return new MessageComponentContentInventoryViewBinding((ContentInventoryComponentView)var0, var2, var7, var5, var4, var6, var3, var8);
+                           return new MessageComponentContentInventoryViewBinding((ContentInventoryComponentView)var0, var6, var3, var7, var2, var5, var4, var8);
                         }
                      }
                   }

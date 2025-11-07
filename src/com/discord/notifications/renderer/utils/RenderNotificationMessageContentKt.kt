@@ -15,17 +15,17 @@ fun b(var0: MatchResult): java.lang.CharSequence {
 }
 
 public fun renderNotificationMessageContent(content: String): String {
-   val var3: Regex = new Regex("(```(?:([a-z0-9_+\\-.]+?)\\n)?\\n*([^\\n].*?)\\n*```)");
-   val var4: Regex = new Regex("((`+)([\\s\\S]*?[^`])\\2(?!`))");
+   val var4: Regex = new Regex("(```(?:([a-z0-9_+\\-.]+?)\\n)?\\n*([^\\n].*?)\\n*```)");
+   val var3: Regex = new Regex("((`+)([\\s\\S]*?[^`])\\2(?!`))");
    val var5: Regex = new Regex("<t:(-?\\d{1,17})(?::([tTdDfFsSR]))?>");
-   var var13: java.lang.String = var4.j(var3.j(var0, new a0()), new b0());
-   var var14: java.lang.String = var0;
+   var var14: java.lang.String = var3.j(var4.j(var0, new a0()), new b0());
+   var var13: java.lang.String = var0;
 
    while (true) {
       var0 = null;
-      val var6: MatchResult = Regex.d(var5, var13, 0, 2, null);
+      val var6: MatchResult = Regex.d(var5, var14, 0, 2, null);
       if (var6 == null) {
-         return var14;
+         return var13;
       }
 
       val var7: MatchGroup = var6.d().get(1);
@@ -92,8 +92,8 @@ public fun renderNotificationMessageContent(content: String): String {
 
       val var12: Int = var6.c().f();
       val var2: Int = var6.c().k();
-      var14 = StringsKt.E0(var14, var12, var2 + 1, var10).toString();
-      var13 = StringsKt.E0(var13, var6.c().f(), var6.c().k() + 1, var10).toString();
+      var13 = StringsKt.E0(var13, var12, var2 + 1, var10).toString();
+      var14 = StringsKt.E0(var14, var6.c().f(), var6.c().k() + 1, var10).toString();
    }
 }
 

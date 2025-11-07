@@ -7,7 +7,7 @@ import com.facebook.react.uimanager.ViewManager
 
 public class LibDiscorePackage : ReactPackage {
    public override fun createNativeModules(reactContext: ReactApplicationContext): List<NativeModule> {
-      return CollectionsKt.e(new LibDiscoreModule(var1));
+      return CollectionsKt.e(new LibDiscoreReactNativeModule(var1));
    }
 
    public override fun createViewManagers(reactContext: ReactApplicationContext): List<ViewManager<*, *>> {

@@ -34,9 +34,9 @@ internal class OkHttpDNSSelector(mode: com.discord.networking.okhttp.OkHttpDNSSe
                   val var10: java.lang.Iterable = var5;
                   val var7: ArrayList = new ArrayList();
 
-                  for (var10 : var10) {
-                     if (Inet4Address.class.isInstance(var10 as InetAddress)) {
-                        var7.add(var10);
+                  for (Object var12 : var10) {
+                     if (Inet4Address.class.isInstance(var12 as InetAddress)) {
+                        var7.add(var12);
                      }
                   }
 
@@ -46,9 +46,9 @@ internal class OkHttpDNSSelector(mode: com.discord.networking.okhttp.OkHttpDNSSe
                val var8: java.lang.Iterable = var5;
                val var6: ArrayList = new ArrayList();
 
-               for (Object var4 : var8) {
-                  if (Inet6Address.class.isInstance(var4 as InetAddress)) {
-                     var6.add(var4);
+               for (var8 : var8) {
+                  if (Inet6Address.class.isInstance(var8 as InetAddress)) {
+                     var6.add(var8);
                   }
                }
 

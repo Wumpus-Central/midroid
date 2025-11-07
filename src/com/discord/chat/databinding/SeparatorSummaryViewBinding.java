@@ -69,26 +69,26 @@ public final class SeparatorSummaryViewBinding implements ViewBinding {
    @NonNull
    public static SeparatorSummaryViewBinding bind(@NonNull View var0) {
       int var1 = R.id.bottom_guideline;
-      Guideline var2 = (Guideline)k5.a.a(var0, var1);
-      if (var2 != null) {
+      Guideline var5 = (Guideline)k5.a.a(var0, var1);
+      if (var5 != null) {
          var1 = R.id.button_wrapper;
-         FrameLayout var3 = (FrameLayout)k5.a.a(var0, var1);
-         if (var3 != null) {
+         FrameLayout var2 = (FrameLayout)k5.a.a(var0, var1);
+         if (var2 != null) {
             var1 = R.id.icon;
-            SimpleDraweeView var5 = (SimpleDraweeView)k5.a.a(var0, var1);
-            if (var5 != null) {
+            SimpleDraweeView var12 = (SimpleDraweeView)k5.a.a(var0, var1);
+            if (var12 != null) {
                var1 = R.id.indicator_bottom;
-               SimpleDraweeView var8 = (SimpleDraweeView)k5.a.a(var0, var1);
-               if (var8 != null) {
+               SimpleDraweeView var10 = (SimpleDraweeView)k5.a.a(var0, var1);
+               if (var10 != null) {
                   var1 = R.id.indicator_end_barrier;
-                  Barrier var11 = (Barrier)k5.a.a(var0, var1);
-                  if (var11 != null) {
+                  Barrier var3 = (Barrier)k5.a.a(var0, var1);
+                  if (var3 != null) {
                      var1 = R.id.indicator_top;
-                     SimpleDraweeView var7 = (SimpleDraweeView)k5.a.a(var0, var1);
-                     if (var7 != null) {
+                     SimpleDraweeView var11 = (SimpleDraweeView)k5.a.a(var0, var1);
+                     if (var11 != null) {
                         var1 = R.id.jump_button;
-                        SimpleDraweeView var6 = (SimpleDraweeView)k5.a.a(var0, var1);
-                        if (var6 != null) {
+                        SimpleDraweeView var8 = (SimpleDraweeView)k5.a.a(var0, var1);
+                        if (var8 != null) {
                            var1 = R.id.middle_text;
                            TextView var9 = (TextView)k5.a.a(var0, var1);
                            if (var9 != null) {
@@ -96,12 +96,12 @@ public final class SeparatorSummaryViewBinding implements ViewBinding {
                               SimpleDraweeView var4 = (SimpleDraweeView)k5.a.a(var0, var1);
                               if (var4 != null) {
                                  var1 = R.id.right_bar;
-                                 View var12 = k5.a.a(var0, var1);
-                                 if (var12 != null) {
+                                 View var7 = k5.a.a(var0, var1);
+                                 if (var7 != null) {
                                     var1 = R.id.top_guideline;
-                                    Guideline var10 = (Guideline)k5.a.a(var0, var1);
-                                    if (var10 != null) {
-                                       return new SeparatorSummaryViewBinding(var0, var2, var3, var5, var8, var11, var7, var6, var9, var4, var12, var10);
+                                    Guideline var6 = (Guideline)k5.a.a(var0, var1);
+                                    if (var6 != null) {
+                                       return new SeparatorSummaryViewBinding(var0, var5, var2, var12, var10, var3, var11, var8, var9, var4, var7, var6);
                                     }
                                  }
                               }

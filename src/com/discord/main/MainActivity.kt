@@ -30,16 +30,16 @@ public class MainActivity : ReactActivity {
          }
 
          private final void parseIntent(Intent var1) {
-            val var3: NotificationClient = NotificationClient.Companion.getInstance();
-            var var2: Context = this.getContext();
-            var3.handleIntent(var2, var1);
+            val var2: NotificationClient = NotificationClient.Companion.getInstance();
+            var var3: Context = this.getContext();
+            var2.handleIntent(var3, var1);
             val var4: ForegroundServiceManager = ForegroundServiceManager.INSTANCE;
-            val var6: Context = this.getContext();
-            var4.handleIntent(var6, var1);
+            var3 = this.getContext();
+            var4.handleIntent(var3, var1);
             StartupFlagsModule.Companion.handleIntent(var1);
             val var7: BundleUpdater = BundleUpdater.Companion.instance();
-            var2 = this.getContext();
-            var7.handleIntent(var2, var1);
+            val var5: Context = this.getContext();
+            var7.handleIntent(var5, var1);
          }
 
          @Override

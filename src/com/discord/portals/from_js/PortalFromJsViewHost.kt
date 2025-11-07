@@ -82,9 +82,9 @@ internal class PortalFromJsViewHost(context: Context) : ReactViewGroup(var1) {
          var18.append(var2);
          val var19: java.lang.String = var18.toString();
          val var14: Pair = v.a("portalId", var4);
-         val var9: Pair = v.a("prevPortalId", var11);
+         val var8: Pair = v.a("prevPortalId", var11);
          val var7: Pair = v.a("child", var1.toString());
-         val var8: Pair = v.a("index", java.lang.String.valueOf(var2));
+         val var9: Pair = v.a("index", java.lang.String.valueOf(var2));
          val var12: java.lang.String;
          if (this.childView == null) {
             var12 = "true";
@@ -95,7 +95,7 @@ internal class PortalFromJsViewHost(context: Context) : ReactViewGroup(var1) {
          CrashReporting.addBreadcrumb$default(
             var17,
             var19,
-            s0.m(new Pair[]{var14, var9, var7, var8, v.a("childViewIsNull", var12), v.a("stacktrace", StacktraceUtilsKt.getCurrentStacktraceString())}),
+            s0.m(new Pair[]{var14, var8, var7, var9, v.a("childViewIsNull", var12), v.a("stacktrace", StacktraceUtilsKt.getCurrentStacktraceString())}),
             "portal",
             null,
             8,
@@ -199,8 +199,8 @@ internal class PortalFromJsViewHost(context: Context) : ReactViewGroup(var1) {
       val var2: Boolean = StringsKt.i0(var3);
       var var4: java.lang.String = "false";
       if (!var2) {
-         val var9: CrashReporting = CrashReporting.INSTANCE;
-         val var20: Pair = v.a("index", java.lang.String.valueOf(var1));
+         val var20: CrashReporting = CrashReporting.INSTANCE;
+         val var9: Pair = v.a("index", java.lang.String.valueOf(var1));
          var var16: java.lang.String = this.portalId;
          if (this.portalId == null) {
             var16 = "";
@@ -217,13 +217,13 @@ internal class PortalFromJsViewHost(context: Context) : ReactViewGroup(var1) {
          }
 
          CrashReporting.addBreadcrumb$default(
-            var9, "About to crash from getChildAt", s0.m(new Pair[]{var20, var19, var14, v.a("childViewIsNull", var4)}), "portal", null, 8, null
+            var20, "About to crash from getChildAt", s0.m(new Pair[]{var9, var19, var14, v.a("childViewIsNull", var4)}), "portal", null, 8, null
          );
          throw new IllegalArgumentException(var3);
       } else {
          if (var1 > 0) {
-            val var8: CrashReporting = CrashReporting.INSTANCE;
-            val var7: Pair = v.a("index", java.lang.String.valueOf(var1));
+            val var7: CrashReporting = CrashReporting.INSTANCE;
+            val var8: Pair = v.a("index", java.lang.String.valueOf(var1));
             var3 = this.portalId;
             if (this.portalId == null) {
                var3 = "";
@@ -241,9 +241,9 @@ internal class PortalFromJsViewHost(context: Context) : ReactViewGroup(var1) {
             }
 
             CrashReporting.addBreadcrumb$default(
-               var8,
+               var7,
                "getChildAt of non-zero index",
-               s0.m(new Pair[]{var7, var15, var12, v.a("childViewIsNull", var4), v.a("stacktrace", StacktraceUtilsKt.getCurrentStacktraceString())}),
+               s0.m(new Pair[]{var8, var15, var12, v.a("childViewIsNull", var4), v.a("stacktrace", StacktraceUtilsKt.getCurrentStacktraceString())}),
                "portal",
                null,
                8,
@@ -319,8 +319,8 @@ internal class PortalFromJsViewHost(context: Context) : ReactViewGroup(var1) {
    public open fun removeViewAt(index: Int) {
       var var2: java.lang.String = "";
       if (var1 > 0) {
-         val var17: CrashReporting = CrashReporting.INSTANCE;
-         val var16: Pair = v.a("index", java.lang.String.valueOf(var1));
+         val var16: CrashReporting = CrashReporting.INSTANCE;
+         val var17: Pair = v.a("index", java.lang.String.valueOf(var1));
          var var11: java.lang.String = this.portalId;
          if (this.portalId == null) {
             var11 = "";
@@ -332,7 +332,7 @@ internal class PortalFromJsViewHost(context: Context) : ReactViewGroup(var1) {
          }
 
          CrashReporting.addBreadcrumb$default(
-            var17, "removeViewAt of non-zero index", s0.m(new Pair[]{var16, var15, v.a("prevPortalId", var2)}), null, null, 12, null
+            var16, "removeViewAt of non-zero index", s0.m(new Pair[]{var17, var15, v.a("prevPortalId", var2)}), null, null, 12, null
          );
          this.otherViews.remove(var1 - 1);
       } else if (var1 == 0 && !this.otherViews.isEmpty()) {

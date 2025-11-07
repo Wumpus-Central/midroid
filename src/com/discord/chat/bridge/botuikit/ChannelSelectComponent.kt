@@ -137,9 +137,9 @@ public data class ChannelSelectComponent(type: Int,
 
    public override fun hashCode(): Int {
       val var5: Int = Integer.hashCode(this.type);
-      val var7: Int = this.id.hashCode();
-      val var4: Int = this.state.hashCode();
-      val var6: Int = this.customId.hashCode();
+      val var6: Int = this.id.hashCode();
+      val var7: Int = this.state.hashCode();
+      val var4: Int = this.customId.hashCode();
       var var3: Int = 0;
       val var1: Int;
       if (this.placeholder == null) {
@@ -155,54 +155,54 @@ public data class ChannelSelectComponent(type: Int,
          var2 = this.accessibilityLabel.hashCode();
       }
 
-      val var10: Int = Integer.hashCode(this.minValues);
-      val var11: Int = Integer.hashCode(this.maxValues);
-      val var8: Int = java.lang.Boolean.hashCode(this.disabled);
-      val var9: Int = this.selectedOptions.hashCode();
+      val var11: Int = Integer.hashCode(this.minValues);
+      val var10: Int = Integer.hashCode(this.maxValues);
+      val var9: Int = java.lang.Boolean.hashCode(this.disabled);
+      val var8: Int = this.selectedOptions.hashCode();
       if (this.channelTypes != null) {
          var3 = this.channelTypes.hashCode();
       }
 
-      return (((((((((var5 * 31 + var7) * 31 + var4) * 31 + var6) * 31 + var1) * 31 + var2) * 31 + var10) * 31 + var11) * 31 + var8) * 31 + var9) * 31 + var3;
+      return (((((((((var5 * 31 + var6) * 31 + var7) * 31 + var4) * 31 + var1) * 31 + var2) * 31 + var11) * 31 + var10) * 31 + var9) * 31 + var8) * 31 + var3;
    }
 
    public override fun toString(): String {
       val var1: Int = this.type;
-      val var11: java.lang.String = this.id;
-      val var9: ActionComponentState = this.state;
-      val var5: java.lang.String = this.customId;
+      val var8: java.lang.String = this.id;
+      val var5: ActionComponentState = this.state;
+      val var11: java.lang.String = this.customId;
       val var10: java.lang.String = this.placeholder;
-      val var12: java.lang.String = this.accessibilityLabel;
-      val var3: Int = this.minValues;
-      val var2: Int = this.maxValues;
+      val var6: java.lang.String = this.accessibilityLabel;
+      val var2: Int = this.minValues;
+      val var3: Int = this.maxValues;
       val var4: Boolean = this.disabled;
       val var7: java.util.List = this.selectedOptions;
-      val var8: java.util.List = this.channelTypes;
-      val var6: StringBuilder = new StringBuilder();
-      var6.append("ChannelSelectComponent(type=");
-      var6.append(var1);
-      var6.append(", id=");
-      var6.append(var11);
-      var6.append(", state=");
-      var6.append(var9);
-      var6.append(", customId=");
-      var6.append(var5);
-      var6.append(", placeholder=");
-      var6.append(var10);
-      var6.append(", accessibilityLabel=");
-      var6.append(var12);
-      var6.append(", minValues=");
-      var6.append(var3);
-      var6.append(", maxValues=");
-      var6.append(var2);
-      var6.append(", disabled=");
-      var6.append(var4);
-      var6.append(", selectedOptions=");
-      var6.append(var7);
-      var6.append(", channelTypes=");
-      var6.append(var8);
-      var6.append(")");
-      return var6.toString();
+      val var12: java.util.List = this.channelTypes;
+      val var9: StringBuilder = new StringBuilder();
+      var9.append("ChannelSelectComponent(type=");
+      var9.append(var1);
+      var9.append(", id=");
+      var9.append(var8);
+      var9.append(", state=");
+      var9.append(var5);
+      var9.append(", customId=");
+      var9.append(var11);
+      var9.append(", placeholder=");
+      var9.append(var10);
+      var9.append(", accessibilityLabel=");
+      var9.append(var6);
+      var9.append(", minValues=");
+      var9.append(var2);
+      var9.append(", maxValues=");
+      var9.append(var3);
+      var9.append(", disabled=");
+      var9.append(var4);
+      var9.append(", selectedOptions=");
+      var9.append(var7);
+      var9.append(", channelTypes=");
+      var9.append(var12);
+      var9.append(")");
+      return var9.toString();
    }
 
    public companion object {

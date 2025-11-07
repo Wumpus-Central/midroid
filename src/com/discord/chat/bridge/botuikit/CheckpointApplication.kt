@@ -65,18 +65,18 @@ public data class CheckpointApplication(applicationId: ApplicationId, applicatio
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = ApplicationId.toString-impl(this.applicationId);
-      val var3: java.lang.String = this.applicationImageId;
-      val var4: java.lang.String = this.applicationName;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("CheckpointApplication(applicationId=");
-      var1.append(var2);
-      var1.append(", applicationImageId=");
-      var1.append(var3);
-      var1.append(", applicationName=");
-      var1.append(var4);
-      var1.append(")");
-      return var1.toString();
+      val var4: java.lang.String = ApplicationId.toString-impl(this.applicationId);
+      val var1: java.lang.String = this.applicationImageId;
+      val var3: java.lang.String = this.applicationName;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("CheckpointApplication(applicationId=");
+      var2.append(var4);
+      var2.append(", applicationImageId=");
+      var2.append(var1);
+      var2.append(", applicationName=");
+      var2.append(var3);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {

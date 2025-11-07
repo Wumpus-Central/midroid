@@ -1,7 +1,34 @@
-/*
-$VF: Unable to decompile class
-Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
-java.lang.RuntimeException: Constructor com/discord/recycler_view/utils/TransitionResilientGridLayoutManager.<init>(Landroid/content/Context;ILkotlin/jvm/functions/Function1;I)V not found
-  at org.jetbrains.java.decompiler.modules.decompiler.exps.ExprUtil.getSyntheticParametersMask(ExprUtil.java:49)
-  at org.jetbrains.java.decompiler.modules.decompiler.exps.InvocationExprent.appendParamList(InvocationExprent.java:959)
-*/
+package com.discord.emoji_picker
+
+import android.content.Context
+import androidx.recyclerview.widget.GridLayoutManager.SpanSizeLookup
+import com.discord.recycler_view.utils.TransitionResilientGridLayoutManager
+
+internal class EmojiPickerLayoutManager(context: Context, rowSize: Int, onGetSpanSize: (Int) -> Int) : TransitionResilientGridLayoutManager(var1, var2, null, 4) {
+   private final val onGetSpanSize: (Int) -> Int
+   private final var isScrollEnabled: Boolean
+
+   init {
+      this.onGetSpanSize = var3;
+      this.isScrollEnabled = true;
+      this.setSpanSizeLookup(new SpanSizeLookup(this) {
+         final EmojiPickerLayoutManager this$0;
+
+         {
+            this.this$0 = var1;
+         }
+
+         public int getSpanSize(int var1) {
+            return (EmojiPickerLayoutManager.access$getOnGetSpanSize$p(this.this$0).invoke(var1) as java.lang.Number).intValue();
+         }
+      });
+   }
+
+   public open fun canScrollVertically(): Boolean {
+      return this.isScrollEnabled && super.canScrollVertically();
+   }
+
+   public fun setScrollingEnabled(enabled: Boolean) {
+      this.isScrollEnabled = var1;
+   }
+}

@@ -1,5 +1,6 @@
 package com.discord.audio
 
+import android.content.Context
 import android.os.Build.VERSION
 import com.discord.audio.react.events.AudioRouteEmitterAudioRouteChanged
 import com.discord.codegen.NativeAudioRouteEmitterModuleSpec
@@ -64,16 +65,16 @@ public class AudioRouteEmitterModule(reactContext: ReactApplicationContext) : Na
       super.initialize();
       var var3: Any;
       if (VERSION.SDK_INT >= 33) {
-         var3 = DiscordAudioManager2.Companion;
-         val var2: ReactApplicationContext = this.getReactApplicationContext();
-         var3 = var3.getInstance(var2);
+         val var2: DiscordAudioManager2.Companion = DiscordAudioManager2.Companion;
+         var3 = this.getReactApplicationContext();
+         var3 = var2.getInstance((Context)var3);
       } else {
-         val var4: DiscordAudioManager.Companion = DiscordAudioManager.Companion;
-         val var5: ReactApplicationContext = this.getReactApplicationContext();
-         var3 = var4.getInstance(var5);
+         val var5: DiscordAudioManager.Companion = DiscordAudioManager.Companion;
+         var3 = this.getReactApplicationContext();
+         var3 = var5.getInstance((Context)var3);
       }
 
-      this.audioManager = var3;
+      this.audioManager = (DiscordAudioManagerInterface)var3;
       var var6: Any = var3;
       if (var3 == null) {
          Intrinsics.throwUninitializedPropertyAccessException("audioManager");

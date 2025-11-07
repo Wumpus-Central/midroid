@@ -107,7 +107,7 @@ public class TTIModule(reactContext: ReactApplicationContext) : NativeTTIModuleS
       }
 
       private fun checkNotificationLaunch(): Boolean {
-         var var1: Intent = TTIModule.access$getMainActivityIntent$cp();
+         val var1: Intent = TTIModule.access$getMainActivityIntent$cp();
          if (var1 != null) {
             val var2: Pair = TTIModule.Companion.extractContentActionData(var1);
             if (var2 != null) {
@@ -119,10 +119,10 @@ public class TTIModule(reactContext: ReactApplicationContext) : NativeTTIModuleS
             }
          }
 
-         var1 = TTIModule.access$getMainActivityIntent$cp();
-         if (var1 != null && (var1.getFlags() and 268435456) != 0) {
-            val var6: java.util.Set = var1.getCategories();
-            if ((var6 == null || !var6.contains("android.intent.category.LAUNCHER")) && !var1.hasExtra("discord_shortcut")) {
+         val var6: Intent = TTIModule.access$getMainActivityIntent$cp();
+         if (var6 != null && (var6.getFlags() and 268435456) != 0) {
+            val var4: java.util.Set = var6.getCategories();
+            if ((var4 == null || !var4.contains("android.intent.category.LAUNCHER")) && !var6.hasExtra("discord_shortcut")) {
                return true;
             }
          }

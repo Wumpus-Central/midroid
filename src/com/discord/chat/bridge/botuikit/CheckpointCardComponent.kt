@@ -54,15 +54,15 @@ public data class CheckpointCardComponent(type: Int, id: String, checkpointData:
 
    public override fun toString(): String {
       val var1: Int = this.type;
-      val var4: java.lang.String = this.id;
-      val var3: CheckpointDataV2025 = this.checkpointData;
+      val var3: java.lang.String = this.id;
+      val var4: CheckpointDataV2025 = this.checkpointData;
       val var2: StringBuilder = new StringBuilder();
       var2.append("CheckpointCardComponent(type=");
       var2.append(var1);
       var2.append(", id=");
-      var2.append(var4);
-      var2.append(", checkpointData=");
       var2.append(var3);
+      var2.append(", checkpointData=");
+      var2.append(var4);
       var2.append(")");
       return var2.toString();
    }

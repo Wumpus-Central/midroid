@@ -11,6 +11,7 @@ import com.discord.crash_reporting.CrashReporting
 import com.discord.crash_reporting.PerformanceTracing
 import com.discord.deep_link.DeepLinks
 import com.discord.image.fresco.FrescoModuleDiscord
+import com.discord.libdiscore.LibdiscoreModule
 import com.discord.lifecycle.AppLifecycle
 import com.discord.media_player.CacheDataSourceFactory
 import com.discord.networking.ReactNetworking
@@ -49,6 +50,7 @@ public class MainApplication : TTILoggingApplication, ReactApplication {
 
    private final var initializeReactNativeLatch: CountDownLatch
    private final var soloaderLoaded: CountDownLatch
+   private final var libdiscoreLoaded: CountDownLatch
 
    @JvmStatic
    fun `attachBaseContext$lambda$0`(var0: Context, var1: MainApplication): Unit {
@@ -71,7 +73,7 @@ public class MainApplication : TTILoggingApplication, ReactApplication {
             val var2: BundleUpdater.Companion = BundleUpdater.Companion;
             BundleUpdater.Companion.init(var0);
             TTIMetrics.record$default(var1, "BundlerUpdater.init()", 0L, null, false, 14, null);
-            ClientInfo.INSTANCE.init(var0, "305.3", 305203, "canary", "release", var2.instance().getManifestETag(), var2.instance().getOtaVersion());
+            ClientInfo.INSTANCE.init(var0, "305.4", 305204, "canary", "release", var2.instance().getManifestETag(), var2.instance().getOtaVersion());
             TTIMetrics.record$default(var1, "ClientInfo.init()", 0L, null, false, 14, null);
             CacheDataSourceFactory.Companion.init(var0);
             TTIMetrics.record$default(var1, "CacheDataSourceFactory.init()", 0L, null, false, 14, null);
@@ -103,13 +105,21 @@ public class MainApplication : TTILoggingApplication, ReactApplication {
          try {
             var0.soloaderLoaded.await();
             FrescoModuleDiscord.Companion.startFrescoInitializationAsync(var0);
-            ReactNativeFeatureFlags.override(new ReactNativeNewArchitectureFeatureFlagsDefaults() {
+            ReactNativeFeatureFlags.override(new ReactNativeNewArchitectureFeatureFlagsDefaults(var0) {
+               final MainApplication this$0;
+
                {
                   super(true);
+                  this.this$0 = var1;
                }
 
                public boolean enableEventEmitterRetentionDuringGesturesOnAndroid() {
                   return true;
+               }
+
+               public boolean shadowTreeLockMountPhase() {
+                  MainApplication.access$getLibdiscoreLoaded$p(this.this$0).await();
+                  return LibdiscoreModule.INSTANCE.getConfigTreatmentId("2025-11-shadow-tree-mount-lock") == 1;
                }
 
                public boolean useFabricInterop() {
@@ -154,7 +164,7 @@ public class MainApplication : TTILoggingApplication, ReactApplication {
             }
          }
 
-         var4 = "discord_android@305.3.0-2+305203";
+         var4 = "discord_android@305.4.0-2+305204";
       }
 
       CrashReporting.INSTANCE.init(var0, var4);

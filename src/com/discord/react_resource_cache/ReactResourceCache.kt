@@ -36,12 +36,12 @@ public abstract class ReactResourceCache<T extends java.lang.Enum<?>> {
          if (var5 != null) {
             return var5;
          } else {
-            val var6: java.lang.String = var2.name();
-            val var7: StringBuilder = new StringBuilder();
-            var7.append("Unable to access ");
-            var7.append(var6);
-            var7.append(" as it has not yet been provided.");
-            throw new IllegalAccessException(var7.toString());
+            val var7: java.lang.String = var2.name();
+            val var6: StringBuilder = new StringBuilder();
+            var6.append("Unable to access ");
+            var6.append(var7);
+            var6.append(" as it has not yet been provided.");
+            throw new IllegalAccessException(var6.toString());
          }
       } else {
          return var3;

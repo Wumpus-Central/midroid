@@ -47,17 +47,17 @@ public class SelectionGuardSpanWatcher : SpanWatcher {
          var5 = var4;
 
          while (var7 < var12) {
-            val var10: Int = var1.getSpanEnd(var14[var7]);
-            val var11: Int = var1.getSpanStart(var14[var7]);
+            val var11: Int = var1.getSpanEnd(var14[var7]);
+            val var10: Int = var1.getSpanStart(var14[var7]);
             var var8: Int = var5;
             var var16: Int = var6;
-            if (var5 > var11) {
+            if (var5 > var10) {
                var8 = var5;
                var16 = var6;
-               if (var5 < var10) {
-                  var16 = var10;
-                  if (var10 - var5 > var5 - var11) {
-                     var16 = var11;
+               if (var5 < var11) {
+                  var16 = var11;
+                  if (var11 - var5 > var5 - var10) {
+                     var16 = var10;
                   }
 
                   var8 = var16;

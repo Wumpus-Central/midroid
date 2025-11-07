@@ -128,8 +128,8 @@ public data class ExecutedCommand(userId: UserId,
          var1 = this.avatarURL.hashCode();
       }
 
-      val var7: Int = Integer.hashCode(this.targetUsernameColor);
-      val var8: Int = this.content.hashCode();
+      val var8: Int = Integer.hashCode(this.targetUsernameColor);
+      val var7: Int = this.content.hashCode();
       val var2: Int;
       if (this.commandNameBackgroundStyles == null) {
          var2 = 0;
@@ -148,35 +148,35 @@ public data class ExecutedCommand(userId: UserId,
          var4 = this.showControllerIcon.hashCode();
       }
 
-      return ((((((var6 * 31 + var5) * 31 + var1) * 31 + var7) * 31 + var8) * 31 + var2) * 31 + var3) * 31 + var4;
+      return ((((((var6 * 31 + var5) * 31 + var1) * 31 + var8) * 31 + var7) * 31 + var2) * 31 + var3) * 31 + var4;
    }
 
    public override fun toString(): String {
-      val var9: java.lang.String = UserId.toString-impl(this.userId);
+      val var3: java.lang.String = UserId.toString-impl(this.userId);
       val var1: Int = this.usernameColor;
-      val var8: java.lang.String = this.avatarURL;
+      val var7: java.lang.String = this.avatarURL;
       val var2: Int = this.targetUsernameColor;
-      val var3: AnnotatedStructurableText = this.content;
-      val var4: ExecutedCommandBackgroundStyles = this.commandNameBackgroundStyles;
-      val var7: java.lang.Boolean = this.showAppsIcon;
-      val var5: java.lang.Boolean = this.showControllerIcon;
+      val var4: AnnotatedStructurableText = this.content;
+      val var5: ExecutedCommandBackgroundStyles = this.commandNameBackgroundStyles;
+      val var9: java.lang.Boolean = this.showAppsIcon;
+      val var8: java.lang.Boolean = this.showControllerIcon;
       val var6: StringBuilder = new StringBuilder();
       var6.append("ExecutedCommand(userId=");
-      var6.append(var9);
+      var6.append(var3);
       var6.append(", usernameColor=");
       var6.append(var1);
       var6.append(", avatarURL=");
-      var6.append(var8);
+      var6.append(var7);
       var6.append(", targetUsernameColor=");
       var6.append(var2);
       var6.append(", content=");
-      var6.append(var3);
-      var6.append(", commandNameBackgroundStyles=");
       var6.append(var4);
-      var6.append(", showAppsIcon=");
-      var6.append(var7);
-      var6.append(", showControllerIcon=");
+      var6.append(", commandNameBackgroundStyles=");
       var6.append(var5);
+      var6.append(", showAppsIcon=");
+      var6.append(var9);
+      var6.append(", showControllerIcon=");
+      var6.append(var8);
       var6.append(")");
       return var6.toString();
    }

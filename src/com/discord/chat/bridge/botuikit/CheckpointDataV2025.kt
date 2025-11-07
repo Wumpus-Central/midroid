@@ -162,13 +162,13 @@ public data class CheckpointDataV2025(authorId: UserId,
 
    public override fun hashCode(): Int {
       val var10: Int = UserId.hashCode-impl(this.authorId);
-      val var7: Int = this.cardId.hashCode();
-      val var9: Int = this.cardAssetUrl.hashCode();
-      val var8: Int = this.powerLevel.hashCode();
-      val var6: Int = Integer.hashCode(this.powerLevelUnits);
-      val var12: Int = this.messagesString.hashCode();
-      val var11: Int = this.voiceString.hashCode();
-      val var5: Int = this.reactionString.hashCode();
+      val var9: Int = this.cardId.hashCode();
+      val var8: Int = this.cardAssetUrl.hashCode();
+      val var12: Int = this.powerLevel.hashCode();
+      val var11: Int = Integer.hashCode(this.powerLevelUnits);
+      val var5: Int = this.messagesString.hashCode();
+      val var6: Int = this.voiceString.hashCode();
+      val var7: Int = this.reactionString.hashCode();
       var var4: Int = 0;
       val var1: Int;
       if (this.clickable == null) {
@@ -195,49 +195,49 @@ public data class CheckpointDataV2025(authorId: UserId,
          var4 = this.topGame.hashCode();
       }
 
-      return ((((((((((var10 * 31 + var7) * 31 + var9) * 31 + var8) * 31 + var6) * 31 + var12) * 31 + var11) * 31 + var5) * 31 + var1) * 31 + var2) * 31 + var3)
+      return ((((((((((var10 * 31 + var9) * 31 + var8) * 31 + var12) * 31 + var11) * 31 + var5) * 31 + var6) * 31 + var7) * 31 + var1) * 31 + var2) * 31 + var3)
             * 31
          + var4;
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = UserId.toString-impl(this.authorId);
-      val var12: java.lang.String = this.cardId;
-      val var13: java.lang.String = this.cardAssetUrl;
-      val var2: java.lang.String = this.powerLevel;
+      val var6: java.lang.String = UserId.toString-impl(this.authorId);
+      val var2: java.lang.String = this.cardId;
+      val var7: java.lang.String = this.cardAssetUrl;
+      val var3: java.lang.String = this.powerLevel;
       val var1: Int = this.powerLevelUnits;
-      val var6: java.lang.String = this.messagesString;
-      val var4: java.lang.String = this.voiceString;
-      val var11: java.lang.String = this.reactionString;
-      val var10: CheckpointCardClickable = this.clickable;
-      val var7: CheckpointEmoji = this.topEmoji;
-      val var5: CheckpointGuild = this.topGuild;
-      val var8: CheckpointApplication = this.topGame;
+      val var4: java.lang.String = this.messagesString;
+      val var12: java.lang.String = this.voiceString;
+      val var8: java.lang.String = this.reactionString;
+      val var5: CheckpointCardClickable = this.clickable;
+      val var11: CheckpointEmoji = this.topEmoji;
+      val var10: CheckpointGuild = this.topGuild;
+      val var13: CheckpointApplication = this.topGame;
       val var9: StringBuilder = new StringBuilder();
       var9.append("CheckpointDataV2025(authorId=");
-      var9.append(var3);
+      var9.append(var6);
       var9.append(", cardId=");
-      var9.append(var12);
-      var9.append(", cardAssetUrl=");
-      var9.append(var13);
-      var9.append(", powerLevel=");
       var9.append(var2);
+      var9.append(", cardAssetUrl=");
+      var9.append(var7);
+      var9.append(", powerLevel=");
+      var9.append(var3);
       var9.append(", powerLevelUnits=");
       var9.append(var1);
       var9.append(", messagesString=");
-      var9.append(var6);
-      var9.append(", voiceString=");
       var9.append(var4);
+      var9.append(", voiceString=");
+      var9.append(var12);
       var9.append(", reactionString=");
-      var9.append(var11);
-      var9.append(", clickable=");
-      var9.append(var10);
-      var9.append(", topEmoji=");
-      var9.append(var7);
-      var9.append(", topGuild=");
-      var9.append(var5);
-      var9.append(", topGame=");
       var9.append(var8);
+      var9.append(", clickable=");
+      var9.append(var5);
+      var9.append(", topEmoji=");
+      var9.append(var11);
+      var9.append(", topGuild=");
+      var9.append(var10);
+      var9.append(", topGame=");
+      var9.append(var13);
       var9.append(")");
       return var9.toString();
    }

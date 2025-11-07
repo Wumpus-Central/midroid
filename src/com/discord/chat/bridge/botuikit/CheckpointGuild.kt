@@ -51,8 +51,8 @@ public data class CheckpointGuild(guildName: String, guildId: GuildId, guildIcon
    }
 
    public override fun hashCode(): Int {
-      val var3: Int = this.guildName.hashCode();
-      val var2: Int = GuildId.hashCode-impl(this.guildId);
+      val var2: Int = this.guildName.hashCode();
+      val var3: Int = GuildId.hashCode-impl(this.guildId);
       val var1: Int;
       if (this.guildIcon == null) {
          var1 = 0;
@@ -60,22 +60,22 @@ public data class CheckpointGuild(guildName: String, guildId: GuildId, guildIcon
          var1 = this.guildIcon.hashCode();
       }
 
-      return (var3 * 31 + var2) * 31 + var1;
+      return (var2 * 31 + var3) * 31 + var1;
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.guildName;
-      val var2: java.lang.String = GuildId.toString-impl(this.guildId);
-      val var1: java.lang.String = this.guildIcon;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("CheckpointGuild(guildName=");
-      var4.append(var3);
-      var4.append(", guildId=");
-      var4.append(var2);
-      var4.append(", guildIcon=");
-      var4.append(var1);
-      var4.append(")");
-      return var4.toString();
+      val var1: java.lang.String = this.guildName;
+      val var4: java.lang.String = GuildId.toString-impl(this.guildId);
+      val var3: java.lang.String = this.guildIcon;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("CheckpointGuild(guildName=");
+      var2.append(var1);
+      var2.append(", guildId=");
+      var2.append(var4);
+      var2.append(", guildIcon=");
+      var2.append(var3);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {

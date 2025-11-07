@@ -83,11 +83,11 @@ internal object ContentResolverUtils {
          var13.append(var14);
          return var1.query(var2, var3, var6, null, var13.toString(), null);
       } else {
-         val var10: Builder = var2.buildUpon();
-         val var9: StringBuilder = new StringBuilder();
-         var9.append("limit=");
-         var9.append(var4);
-         val var11: Builder = var10.encodedQuery(var9.toString());
+         val var9: Builder = var2.buildUpon();
+         val var10: StringBuilder = new StringBuilder();
+         var10.append("limit=");
+         var10.append(var4);
+         val var11: Builder = var9.encodedQuery(var10.toString());
          if (var7 != null) {
             var11.appendQueryParameter("offset", java.lang.String.valueOf(var7.intValue()));
          }

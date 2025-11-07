@@ -12,10 +12,10 @@ internal fun InputStream.writeTo(outputFile: File): File {
       try {
          var2.s0(u.l(var0));
       } catch (var4: java.lang.Throwable) {
-         val var10: java.lang.Throwable = var4;
+         val var9: java.lang.Throwable = var4;
 
          try {
-            throw var10;
+            throw var9;
          } catch (var3: java.lang.Throwable) {
             tt.c.a(var2, var4);
          }

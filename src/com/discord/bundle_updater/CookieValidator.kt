@@ -54,10 +54,10 @@ public object CookieValidator {
 
                   for (Entry var5 : var18.entrySet()) {
                      val var20: Any = var5.getKey();
-                     val var6: JsonElement = var5.getValue() as JsonElement;
-                     val var21: kotlinx.serialization.json.Json.a = Json.d;
+                     val var21: JsonElement = var5.getValue() as JsonElement;
+                     val var6: kotlinx.serialization.json.Json.a = Json.d;
                      Json.d.a();
-                     var17.put(var20, var21.d(BuildOverrideCookieBuild.Companion.serializer(), var6) as BuildOverrideCookieBuild);
+                     var17.put(var20, var6.d(BuildOverrideCookieBuild.Companion.serializer(), var21) as BuildOverrideCookieBuild);
                   }
 
                   return new BuildOverrideCookieContents(var12, var17);

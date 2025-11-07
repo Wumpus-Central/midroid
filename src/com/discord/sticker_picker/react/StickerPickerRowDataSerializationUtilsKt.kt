@@ -12,19 +12,19 @@ import kotlin.jvm.internal.SourceDebugExtension
 
 internal fun deserializeStickerPickerRowData(data: ReadableMap): StickerPickerRow {
    val var1: Double = var0.getDouble("rowContentWidth");
-   val var4: Int = var0.getInt("rowContentPaddingVertical");
-   val var3: Int = var0.getInt("itemSize");
-   val var10: ReadableArray = NativeMapExtensionsKt.getNonNullArray(var0, "items");
-   val var14: IntRange = NativeArrayExtensionsKt.sizeRange(var10);
-   val var9: ArrayList = new ArrayList(CollectionsKt.w(var14, 10));
+   val var3: Int = var0.getInt("rowContentPaddingVertical");
+   val var4: Int = var0.getInt("itemSize");
+   val var9: ReadableArray = NativeMapExtensionsKt.getNonNullArray(var0, "items");
+   val var14: IntRange = NativeArrayExtensionsKt.sizeRange(var9);
+   val var10: ArrayList = new ArrayList(CollectionsKt.w(var14, 10));
    val var11: java.util.Iterator = var14.iterator();
 
    while (var11.hasNext()) {
       var var5: Int = (var11 as q0).nextInt();
-      val var6: Boolean = var10.isNull(var5);
+      val var6: Boolean = var9.isNull(var5);
       var var15: StickerPickerRow.Sticker = null;
       if (!var6) {
-         var0 = var10.getMap(var5);
+         var0 = var9.getMap(var5);
          val var7: java.lang.String;
          if (var0 != null) {
             var7 = var0.getString("stickerId");
@@ -34,7 +34,7 @@ internal fun deserializeStickerPickerRowData(data: ReadableMap): StickerPickerRo
 
          var15 = null;
          if (var7 != null) {
-            val var20: ReadableMap = var10.getMap(var5);
+            val var20: ReadableMap = var9.getMap(var5);
             val var12: java.lang.String = NativeMapExtensionsKt.getNonNullString(var20, "stickerId");
             val var21: java.lang.String = NativeMapExtensionsKt.getNonNullString(var20, "stickerName");
             var5 = var20.getInt("stickerType");
@@ -72,8 +72,8 @@ internal fun deserializeStickerPickerRowData(data: ReadableMap): StickerPickerRo
          }
       }
 
-      var9.add(var15);
+      var10.add(var15);
    }
 
-   return new StickerPickerRow(var1, var4, var3, var9);
+   return new StickerPickerRow(var1, var3, var4, var10);
 }
