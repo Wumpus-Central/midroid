@@ -14256,6 +14256,9 @@
   "MwjTvn": [
     "Nothing here yet"
   ],
+  "/VzCKE": [
+    "Requires Subscription"
+  ],
   "B66Z+f": [
     "Active"
   ],
@@ -23454,6 +23457,25 @@
       ]
     ]
   ],
+  "naflH+": [
+    [
+      8,
+      "userHook",
+      [
+        [
+          8,
+          "$b",
+          [
+            [
+              1,
+              "user"
+            ]
+          ]
+        ]
+      ]
+    ],
+    " updated Bypass Slowmode permission"
+  ],
   "3Ne7MA": [
     [
       8,
@@ -25941,6 +25963,9 @@
         ]
       ]
     ]
+  ],
+  "PggHmu": [
+    "Update Permissions"
   ],
   "WJ3MPt": [
     [
@@ -29721,6 +29746,18 @@
   ],
   "2jxGer": [
     "Log Out"
+  ],
+  "4tLS33": [
+    "Low Performance Mode"
+  ],
+  "HJ8uTI": [
+    "Low Performance Mode overrides several of our Accessibility settings related to Reduced Motion in order to reduce the resource load on your device. This is recommended for users on less powerful Android devices."
+  ],
+  "1y+WEi": [
+    "Low Performance Mode is enabled. Disable it in Advanced Settings to change this setting."
+  ],
+  "p141JQ": [
+    "Enable Low Performance Mode"
   ],
   "RLch70": [
     "Join Server"
@@ -34843,7 +34880,13 @@
     "Permissions"
   ],
   "2XIdPp": [
-    "Pinning messages now has a separate permission.  This setting’s behavior will change soon."
+    "This permission will soon stop granting the ability to pin messages."
+  ],
+  "zSc2tb": [
+    "This permission will soon stop granting the ability to pin messages or bypass slowmode."
+  ],
+  "Han3PH": [
+    "This permission will soon stop granting the ability to bypass slowmode."
   ],
   "OIhm0M": [
     "Permissions not synced with category: ",
@@ -34869,6 +34912,126 @@
   ],
   "ujC3ZS": [
     "Passthrough"
+  ],
+  "xaPmNf": [
+    "Historically, Pin Messages and Bypass Slowmode were controlled by permissions intended for moderators, such as ",
+    [
+      8,
+      "$b",
+      [
+        "Manage Messages"
+      ]
+    ],
+    " and ",
+    [
+      8,
+      "$b",
+      [
+        "Manage Channels"
+      ]
+    ],
+    ". However, these permissions grant access to more destructive actions, such as deleting other people’s messages. As such, we are adding two new permissions to more granularly control access:"
+  ],
+  "58yMLG": [
+    "Something went wrong while updating your permissions. You can try again later."
+  ],
+  "/SSzPD": [
+    "Automatically update your role permissions below:"
+  ],
+  "hvFwHy": [
+    "A Server Administrator can copy over the setting for all roles and channels by visiting this page."
+  ],
+  "KMbKTt": [
+    "Grant Pin Messages to all users and roles that currently have Manage Messages"
+  ],
+  "IJKefK": [
+    "Pin Messages permission granted"
+  ],
+  "7ltOG9": [
+    "Grant Bypass Slowmode to all users and roles that currently have Manage Messages or Manage Channel"
+  ],
+  "gVKQNA": [
+    "Bypass Slowmode permission granted"
+  ],
+  "cO6rkf": [
+    "Migrate Permissions"
+  ],
+  "tUarT8": [
+    [
+      8,
+      "$b",
+      [
+        "Pin Messages:"
+      ]
+    ],
+    " Pin messages in channels"
+  ],
+  "r807RN": [
+    [
+      8,
+      "$b",
+      [
+        "Bypass Slowmode:"
+      ]
+    ],
+    " Send messages without slowmode restrictions"
+  ],
+  "iLwQzv": [
+    "After ",
+    [
+      1,
+      "breakingChangeDate"
+    ],
+    ": Users will ",
+    [
+      8,
+      "$b",
+      [
+        "need one of the granular permissions"
+      ]
+    ],
+    " to perform these actions. The older permissions, such as ",
+    [
+      8,
+      "$b",
+      [
+        "Manage Messages"
+      ]
+    ],
+    ", will no longer grant access."
+  ],
+  "eo5E6e": [
+    "Until ",
+    [
+      1,
+      "breakingChangeDate"
+    ],
+    ": If a user has either the old required permissions or the new permission, they will be able to perform the action."
+  ],
+  "bLwbyU": [
+    "Transition Timeline:"
+  ],
+  "YUC2bm": [
+    "There are upcoming changes to the ",
+    [
+      8,
+      "$b",
+      [
+        "Pin Messages"
+      ]
+    ],
+    " and ",
+    [
+      8,
+      "$b",
+      [
+        "Bypass Slowmode"
+      ]
+    ],
+    " permissions that affect your server."
+  ],
+  "nzAUEP": [
+    "Permissions updated"
   ],
   "gJvDDh": [
     "By turning this off you lose access to things like personalized recommendations and suggestions. You won’t be able to recover them in the future!"
@@ -34920,6 +35083,9 @@
   ],
   "SkfkEJ": [
     "Photo"
+  ],
+  "Zmm6dN": [
+    "Photos"
   ],
   "WTqQ5e": [
     "Pick a Color"
@@ -53659,9 +53825,6 @@
   ],
   "PXq9f1": [
     "Video Uploads"
-  ],
-  "rUEjBe": [
-    "View all"
   ],
   "fZgLpA": [
     "View Audit Log"

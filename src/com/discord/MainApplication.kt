@@ -73,7 +73,7 @@ public class MainApplication : TTILoggingApplication, ReactApplication {
             val var2: BundleUpdater.Companion = BundleUpdater.Companion;
             BundleUpdater.Companion.init(var0);
             TTIMetrics.record$default(var1, "BundlerUpdater.init()", 0L, null, false, 14, null);
-            ClientInfo.INSTANCE.init(var0, "305.4", 305204, "canary", "release", var2.instance().getManifestETag(), var2.instance().getOtaVersion());
+            ClientInfo.INSTANCE.init(var0, "305.5", 305205, "canary", "release", var2.instance().getManifestETag(), var2.instance().getOtaVersion());
             TTIMetrics.record$default(var1, "ClientInfo.init()", 0L, null, false, 14, null);
             CacheDataSourceFactory.Companion.init(var0);
             TTIMetrics.record$default(var1, "CacheDataSourceFactory.init()", 0L, null, false, 14, null);
@@ -164,7 +164,7 @@ public class MainApplication : TTILoggingApplication, ReactApplication {
             }
          }
 
-         var4 = "discord_android@305.4.0-2+305204";
+         var4 = "discord_android@305.5.0-2+305205";
       }
 
       CrashReporting.INSTANCE.init(var0, var4);
